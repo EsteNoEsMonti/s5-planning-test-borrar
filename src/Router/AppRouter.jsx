@@ -4,6 +4,8 @@ import About from '../components/Abaout'
 import Dashboard from '../components/Dashboard'
 import NotFound from '../components/NotFound'
 import ProfileSelector from '../components/ProfileSelector'
+import ProfileDetail from '../components/ProfileDetail.'
+import ProfileCreate from '../components/ProfileCreate'
 
 const AppRouter = () => {
   return (
@@ -18,7 +20,10 @@ const AppRouter = () => {
       </Route>
 
       {/* Ruta para profile Selector */}
-      <Route path="/profiles" element={<ProfileSelector />} />
+      <Route path="/profiles" element={<ProfileSelector />} /> 
+      <Route path="/profiles/:id" element={<ProfileDetail />} />
+      <Route path="/profiles/create-profile" element={<ProfileCreate />} />
+
 
       {/* Ruta no encontrada */}
       {/* opcion 404 poge  */}

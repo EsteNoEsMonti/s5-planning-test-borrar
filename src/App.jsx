@@ -1,9 +1,12 @@
+import { ProfileProvider } from "./contexts/ProfileContext"
 import AppRouter from "./Router/AppRouter"
 
 function App() {
   return (
     <>
-      <AppRouter />
+      <ProfileProvider>
+        <AppRouter />
+      </ProfileProvider>
     </>
   )
 }
